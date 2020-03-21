@@ -14,10 +14,6 @@
 
   _npm install_
 
-- Create dist (build) folder (also for production):
-
-  _npm run build_
-
 ## Now you may begin!
 
 - To start, run:
@@ -28,3 +24,17 @@
 - For dev mode:
 
   _npm run dev_
+
+- For production build:
+
+  _npm run build_
+
+## Security Vulnerability Warning:
+
+- There is a security vulnerability that may appear because of some packages being dependent on an outdated version of the package _chokidar_. Chokidar in turn uses an outdated version of the _minimist_ package To find out if the security vulnerability is present, run:
+
+_npm audit_
+
+- If your app has the security vulnerability, run:
+
+_npm install chokidar_
