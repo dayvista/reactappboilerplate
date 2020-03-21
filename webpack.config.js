@@ -130,10 +130,6 @@ module.exports = {
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new HtmlWebpackPlugin({
           template: "./src/index.html"
-          // minify: {
-          //   collapseWhitespace: true,
-          //   removeAttributeQuotes: false
-          // }
         }),
         new CompressionPlugin({
           test: /\.(html|css|js|gif|svg|ico|woff|ttf|eot)$/,
