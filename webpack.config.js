@@ -5,7 +5,6 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const debug = process.env.NODE_ENV !== "production";
 const webpack = require("webpack");
-const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
@@ -106,7 +105,7 @@ module.exports = {
           // set the current working directory for displaying module paths
           cwd: process.cwd()
         }),
-        new HtmlWebpackPlugin({
+        new HTMLWebpackPlugin({
           template: "./src/index.html"
         })
       ]
@@ -128,7 +127,7 @@ module.exports = {
           minimize: true
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-        new HtmlWebpackPlugin({
+        new HTMLWebpackPlugin({
           template: "./src/index.html"
         }),
         new CompressionPlugin({
